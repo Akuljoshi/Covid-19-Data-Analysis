@@ -1,0 +1,1511 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20211.21.0420.1112                               -->
+<workbook original-version='18.1' source-build='2021.1.1 (20211.21.0420.1112)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='HospitalBedsIndia+' inline='true' name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='HospitalBedsIndia' name='textscan.1rkkcc60l673xw17lm7gd0fe238b'>
+            <connection class='textscan' directory='C:/Users/a/Desktop/Pro/COVID' filename='HospitalBedsIndia.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[HospitalBedsIndia.csv].[State/UT]' />
+              <expression op='[population_india_census2011.csv].[State / Union Territory]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1rkkcc60l673xw17lm7gd0fe238b' name='HospitalBedsIndia.csv' table='[HospitalBedsIndia#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Sno' ordinal='0' />
+              <column datatype='string' name='State/UT' ordinal='1' />
+              <column datatype='integer' name='NumPrimaryHealthCenters_HMIS' ordinal='2' />
+              <column datatype='integer' name='NumCommunityHealthCenters_HMIS' ordinal='3' />
+              <column datatype='integer' name='NumSubDistrictHospitals_HMIS' ordinal='4' />
+              <column datatype='integer' name='NumDistrictHospitals_HMIS' ordinal='5' />
+              <column datatype='integer' name='TotalPublicHealthFacilities_HMIS' ordinal='6' />
+              <column datatype='integer' name='NumPublicBeds_HMIS' ordinal='7' />
+              <column datatype='integer' name='NumRuralHospitals_NHP18' ordinal='8' />
+              <column datatype='integer' name='NumRuralBeds_NHP18' ordinal='9' />
+              <column datatype='integer' name='NumUrbanHospitals_NHP18' ordinal='10' />
+              <column datatype='integer' name='NumUrbanBeds_NHP18' ordinal='11' />
+              <column datatype='string' name='F13' ordinal='12' />
+              <column datatype='string' name='F14' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1rkkcc60l673xw17lm7gd0fe238b' name='population_india_census2011.csv' table='[population_india_census2011#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Sno' ordinal='0' />
+              <column datatype='string' name='State / Union Territory' ordinal='1' />
+              <column datatype='integer' name='Population' ordinal='2' />
+              <column datatype='integer' name='Rural population' ordinal='3' />
+              <column datatype='integer' name='Urban population' ordinal='4' />
+              <column datatype='string' name='Area' ordinal='5' />
+              <column datatype='string' name='Density' ordinal='6' />
+              <column datatype='integer' name='Gender Ratio' ordinal='7' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation join='inner' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[HospitalBedsIndia.csv].[State/UT]' />
+              <expression op='[population_india_census2011.csv].[State / Union Territory]' />
+            </expression>
+          </clause>
+          <relation connection='textscan.1rkkcc60l673xw17lm7gd0fe238b' name='HospitalBedsIndia.csv' table='[HospitalBedsIndia#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Sno' ordinal='0' />
+              <column datatype='string' name='State/UT' ordinal='1' />
+              <column datatype='integer' name='NumPrimaryHealthCenters_HMIS' ordinal='2' />
+              <column datatype='integer' name='NumCommunityHealthCenters_HMIS' ordinal='3' />
+              <column datatype='integer' name='NumSubDistrictHospitals_HMIS' ordinal='4' />
+              <column datatype='integer' name='NumDistrictHospitals_HMIS' ordinal='5' />
+              <column datatype='integer' name='TotalPublicHealthFacilities_HMIS' ordinal='6' />
+              <column datatype='integer' name='NumPublicBeds_HMIS' ordinal='7' />
+              <column datatype='integer' name='NumRuralHospitals_NHP18' ordinal='8' />
+              <column datatype='integer' name='NumRuralBeds_NHP18' ordinal='9' />
+              <column datatype='integer' name='NumUrbanHospitals_NHP18' ordinal='10' />
+              <column datatype='integer' name='NumUrbanBeds_NHP18' ordinal='11' />
+              <column datatype='string' name='F13' ordinal='12' />
+              <column datatype='string' name='F14' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1rkkcc60l673xw17lm7gd0fe238b' name='population_india_census2011.csv' table='[population_india_census2011#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Sno' ordinal='0' />
+              <column datatype='string' name='State / Union Territory' ordinal='1' />
+              <column datatype='integer' name='Population' ordinal='2' />
+              <column datatype='integer' name='Rural population' ordinal='3' />
+              <column datatype='integer' name='Urban population' ordinal='4' />
+              <column datatype='string' name='Area' ordinal='5' />
+              <column datatype='string' name='Density' ordinal='6' />
+              <column datatype='integer' name='Gender Ratio' ordinal='7' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Area]' value='[population_india_census2011.csv].[Area]' />
+          <map key='[Density]' value='[population_india_census2011.csv].[Density]' />
+          <map key='[F13]' value='[HospitalBedsIndia.csv].[F13]' />
+          <map key='[F14]' value='[HospitalBedsIndia.csv].[F14]' />
+          <map key='[Gender Ratio]' value='[population_india_census2011.csv].[Gender Ratio]' />
+          <map key='[NumCommunityHealthCenters_HMIS]' value='[HospitalBedsIndia.csv].[NumCommunityHealthCenters_HMIS]' />
+          <map key='[NumDistrictHospitals_HMIS]' value='[HospitalBedsIndia.csv].[NumDistrictHospitals_HMIS]' />
+          <map key='[NumPrimaryHealthCenters_HMIS]' value='[HospitalBedsIndia.csv].[NumPrimaryHealthCenters_HMIS]' />
+          <map key='[NumPublicBeds_HMIS]' value='[HospitalBedsIndia.csv].[NumPublicBeds_HMIS]' />
+          <map key='[NumRuralBeds_NHP18]' value='[HospitalBedsIndia.csv].[NumRuralBeds_NHP18]' />
+          <map key='[NumRuralHospitals_NHP18]' value='[HospitalBedsIndia.csv].[NumRuralHospitals_NHP18]' />
+          <map key='[NumSubDistrictHospitals_HMIS]' value='[HospitalBedsIndia.csv].[NumSubDistrictHospitals_HMIS]' />
+          <map key='[NumUrbanBeds_NHP18]' value='[HospitalBedsIndia.csv].[NumUrbanBeds_NHP18]' />
+          <map key='[NumUrbanHospitals_NHP18]' value='[HospitalBedsIndia.csv].[NumUrbanHospitals_NHP18]' />
+          <map key='[Population]' value='[population_india_census2011.csv].[Population]' />
+          <map key='[Rural population]' value='[population_india_census2011.csv].[Rural population]' />
+          <map key='[Sno (population_india_census2011.csv)]' value='[population_india_census2011.csv].[Sno]' />
+          <map key='[Sno]' value='[HospitalBedsIndia.csv].[Sno]' />
+          <map key='[State / Union Territory]' value='[population_india_census2011.csv].[State / Union Territory]' />
+          <map key='[State/UT]' value='[HospitalBedsIndia.csv].[State/UT]' />
+          <map key='[TotalPublicHealthFacilities_HMIS]' value='[HospitalBedsIndia.csv].[TotalPublicHealthFacilities_HMIS]' />
+          <map key='[Urban population]' value='[population_india_census2011.csv].[Urban population]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sno]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>Sno</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State/UT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State/UT]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>State/UT</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumPrimaryHealthCenters_HMIS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumPrimaryHealthCenters_HMIS]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumPrimaryHealthCenters_HMIS</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumCommunityHealthCenters_HMIS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumCommunityHealthCenters_HMIS]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumCommunityHealthCenters_HMIS</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumSubDistrictHospitals_HMIS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumSubDistrictHospitals_HMIS]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumSubDistrictHospitals_HMIS</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumDistrictHospitals_HMIS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumDistrictHospitals_HMIS]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumDistrictHospitals_HMIS</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPublicHealthFacilities_HMIS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPublicHealthFacilities_HMIS]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>TotalPublicHealthFacilities_HMIS</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumPublicBeds_HMIS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumPublicBeds_HMIS]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumPublicBeds_HMIS</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumRuralHospitals_NHP18</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumRuralHospitals_NHP18]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumRuralHospitals_NHP18</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumRuralBeds_NHP18</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumRuralBeds_NHP18]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumRuralBeds_NHP18</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumUrbanHospitals_NHP18</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumUrbanHospitals_NHP18]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumUrbanHospitals_NHP18</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NumUrbanBeds_NHP18</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[NumUrbanBeds_NHP18]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>NumUrbanBeds_NHP18</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F13</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F13]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>F13</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F14</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[F14]</local-name>
+            <parent-name>[HospitalBedsIndia.csv]</parent-name>
+            <remote-alias>F14</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sno</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Sno (population_india_census2011.csv)]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Sno</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State / Union Territory</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[State / Union Territory]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>State / Union Territory</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Population]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Population</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rural population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rural population]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Rural population</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Urban population</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Urban population]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Urban population</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Area</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Area]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Area</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Density</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Density]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Density</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Gender Ratio</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Gender Ratio]</local-name>
+            <parent-name>[population_india_census2011.csv]</parent-name>
+            <remote-alias>Gender Ratio</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='No. of people sharing 1 rural bed' datatype='real' name='[Calculation_133419183080026112]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Rural population]/[NumRuralBeds_NHP18]' />
+      </column>
+      <column caption='No. of people sharing 1 urban bed' datatype='real' name='[Calculation_133419183080964097]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Urban population]/[NumUrbanBeds_NHP18]' />
+      </column>
+      <column caption='NumCommunityHealthCenters HMIS' datatype='integer' name='[NumCommunityHealthCenters_HMIS]' role='measure' type='quantitative' />
+      <column caption='NumDistrictHospitals HMIS' datatype='integer' name='[NumDistrictHospitals_HMIS]' role='measure' type='quantitative' />
+      <column caption='NumPrimaryHealthCenters HMIS' datatype='integer' name='[NumPrimaryHealthCenters_HMIS]' role='measure' type='quantitative' />
+      <column caption='NumPublicBeds HMIS' datatype='integer' name='[NumPublicBeds_HMIS]' role='measure' type='quantitative' />
+      <column caption='NumRuralBeds NHP18' datatype='integer' name='[NumRuralBeds_NHP18]' role='measure' type='quantitative' />
+      <column caption='NumRuralHospitals NHP18' datatype='integer' name='[NumRuralHospitals_NHP18]' role='measure' type='quantitative' />
+      <column caption='NumSubDistrictHospitals HMIS' datatype='integer' name='[NumSubDistrictHospitals_HMIS]' role='measure' type='quantitative' />
+      <column caption='NumUrbanBeds NHP18' datatype='integer' name='[NumUrbanBeds_NHP18]' role='measure' type='quantitative' />
+      <column caption='NumUrbanHospitals NHP18' datatype='integer' name='[NumUrbanHospitals_NHP18]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Population]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Rural population]' role='measure' type='quantitative' />
+      <column caption='Sno (population india census2011.csv)' datatype='integer' name='[Sno (population_india_census2011.csv)]' role='measure' type='quantitative' />
+      <column datatype='string' name='[State / Union Territory]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column datatype='string' name='[State/UT]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='TotalPublicHealthFacilities HMIS' datatype='integer' name='[TotalPublicHealthFacilities_HMIS]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Urban population]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='HospitalBedsIndia.csv' datatype='table' name='[__tableau_internal_object_id__].[HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2]' role='measure' type='quantitative' />
+      <column-instance column='[Calculation_133419183080026112]' derivation='Sum' name='[sum:Calculation_133419183080026112:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_133419183080964097]' derivation='Sum' name='[sum:Calculation_133419183080964097:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Population]' derivation='Sum' name='[sum:Population:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Rural population]' derivation='Sum' name='[sum:Rural population:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Urban population]' derivation='Sum' name='[sum:Urban population:qk]' pivot='key' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Population:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Calculation_133419183080964097:qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Calculation_133419183080026112:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Urban population:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Rural population:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='HospitalBedsIndia.csv' id='HospitalBedsIndia.csv_2F36658BEB984D07B07EF5DEC0D39DD2'>
+            <properties context=''>
+              <relation join='inner' type='join'>
+                <clause type='join'>
+                  <expression op='='>
+                    <expression op='[HospitalBedsIndia.csv].[State/UT]' />
+                    <expression op='[population_india_census2011.csv].[State / Union Territory]' />
+                  </expression>
+                </clause>
+                <relation connection='textscan.1rkkcc60l673xw17lm7gd0fe238b' name='HospitalBedsIndia.csv' table='[HospitalBedsIndia#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='Sno' ordinal='0' />
+                    <column datatype='string' name='State/UT' ordinal='1' />
+                    <column datatype='integer' name='NumPrimaryHealthCenters_HMIS' ordinal='2' />
+                    <column datatype='integer' name='NumCommunityHealthCenters_HMIS' ordinal='3' />
+                    <column datatype='integer' name='NumSubDistrictHospitals_HMIS' ordinal='4' />
+                    <column datatype='integer' name='NumDistrictHospitals_HMIS' ordinal='5' />
+                    <column datatype='integer' name='TotalPublicHealthFacilities_HMIS' ordinal='6' />
+                    <column datatype='integer' name='NumPublicBeds_HMIS' ordinal='7' />
+                    <column datatype='integer' name='NumRuralHospitals_NHP18' ordinal='8' />
+                    <column datatype='integer' name='NumRuralBeds_NHP18' ordinal='9' />
+                    <column datatype='integer' name='NumUrbanHospitals_NHP18' ordinal='10' />
+                    <column datatype='integer' name='NumUrbanBeds_NHP18' ordinal='11' />
+                    <column datatype='string' name='F13' ordinal='12' />
+                    <column datatype='string' name='F14' ordinal='13' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1rkkcc60l673xw17lm7gd0fe238b' name='population_india_census2011.csv' table='[population_india_census2011#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                    <column datatype='integer' name='Sno' ordinal='0' />
+                    <column datatype='string' name='State / Union Territory' ordinal='1' />
+                    <column datatype='integer' name='Population' ordinal='2' />
+                    <column datatype='integer' name='Rural population' ordinal='3' />
+                    <column datatype='integer' name='Urban population' ordinal='4' />
+                    <column datatype='string' name='Area' ordinal='5' />
+                    <column datatype='string' name='Density' ordinal='6' />
+                    <column datatype='integer' name='Gender Ratio' ordinal='7' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <shared-views>
+    <shared-view name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n'>
+      <datasources>
+        <datasource caption='HospitalBedsIndia+' name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1m52c2d08ygiqe0zxvnrc0a93i6n'>
+        <column datatype='string' name='[State / Union Territory]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+        <column-instance column='[State / Union Territory]' derivation='None' name='[none:State / Union Territory:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='categorical' column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]'>
+        <groupfilter function='member' level='[none:State / Union Territory:nk]' member='&quot;Maharashtra&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='availablity of hospital beds in chosen State'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HospitalBedsIndia+' name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m52c2d08ygiqe0zxvnrc0a93i6n'>
+            <column caption='No. of people sharing 1 rural bed' datatype='real' name='[Calculation_133419183080026112]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Rural population]/[NumRuralBeds_NHP18]' />
+            </column>
+            <column caption='No. of people sharing 1 urban bed' datatype='real' name='[Calculation_133419183080964097]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Urban population]/[NumUrbanBeds_NHP18]' />
+            </column>
+            <column caption='NumRuralBeds NHP18' datatype='integer' name='[NumRuralBeds_NHP18]' role='measure' type='quantitative' />
+            <column caption='NumUrbanBeds NHP18' datatype='integer' name='[NumUrbanBeds_NHP18]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Rural population]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State / Union Territory]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='integer' name='[Urban population]' role='measure' type='quantitative' />
+            <column-instance column='[State / Union Territory]' derivation='None' name='[none:State / Union Territory:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_133419183080026112]' derivation='Sum' name='[sum:Calculation_133419183080026112:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_133419183080964097]' derivation='Sum' name='[sum:Calculation_133419183080964097:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Calculation_133419183080026112:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Calculation_133419183080964097:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</column>
+            <column>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' value='194' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' />
+              <text column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='544' />
+                <format attr='maxheight' value='544' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[Multiple Values]</rows>
+        <cols>([federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk] / [federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{40550883-04B9-4155-B80D-4E38B7790CB7}' />
+    </worksheet>
+    <worksheet name='population of chosen State'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HospitalBedsIndia+' name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m52c2d08ygiqe0zxvnrc0a93i6n'>
+            <column datatype='integer' name='[Population]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Rural population]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State / Union Territory]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column datatype='integer' name='[Urban population]' role='measure' type='quantitative' />
+            <column-instance column='[State / Union Territory]' derivation='None' name='[none:State / Union Territory:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Population]' derivation='Sum' name='[sum:Population:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Rural population]' derivation='Sum' name='[sum:Rural population:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Urban population]' derivation='Sum' name='[sum:Urban population:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Population:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Rural population:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:Urban population:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</column>
+            <column>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[Multiple Values]' field-type='quantitative' max='129659054.78263837' min='-22506234.355111733' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' />
+              <text column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[Multiple Values]</rows>
+        <cols>([federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk] / [federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{42A60897-BD30-4808-9C77-7756B2ED97CC}' />
+    </worksheet>
+    <worksheet name='statistic of hospital beds'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='HospitalBedsIndia+' name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1m52c2d08ygiqe0zxvnrc0a93i6n'>
+            <column caption='NumRuralBeds NHP18' datatype='integer' name='[NumRuralBeds_NHP18]' role='measure' type='quantitative' />
+            <column caption='NumUrbanBeds NHP18' datatype='integer' name='[NumUrbanBeds_NHP18]' role='measure' type='quantitative' />
+            <column datatype='string' name='[State / Union Territory]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[State / Union Territory]' derivation='None' name='[none:State / Union Territory:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NumRuralBeds_NHP18]' derivation='Sum' name='[sum:NumRuralBeds_NHP18:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[NumUrbanBeds_NHP18]' derivation='Sum' name='[sum:NumUrbanBeds_NHP18:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:NumRuralBeds_NHP18:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[sum:NumUrbanBeds_NHP18:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</column>
+            <column>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</rows>
+        <cols>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{805C8038-A540-4C05-95F7-D0EAA807BD07}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Health facilities in states of India'>
+      <style />
+      <size maxheight='800' maxwidth='1600' minheight='800' minwidth='1600' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='HospitalBedsIndia+' name='federated.1m52c2d08ygiqe0zxvnrc0a93i6n' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1m52c2d08ygiqe0zxvnrc0a93i6n'>
+        <column datatype='string' name='[State / Union Territory]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+        <column-instance column='[State / Union Territory]' derivation='None' name='[none:State / Union Territory:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='77875' id='3' name='population of chosen State' w='33500' x='188' y='20875' />
+        <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='12250' id='9' name='population of chosen State' pane-specification-id='0' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' w='16000' x='78375' y='30875' />
+        <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='14000' id='8' mode='dropdown' name='population of chosen State' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]' w='15500' x='79500' y='14625' />
+        <zone h='78375' id='10' name='availablity of hospital beds in chosen State' w='35688' x='34688' y='20750' />
+        <zone h='37750' id='11' name='statistic of hospital beds' w='27375' x='70875' y='54750' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='15' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='14' param='vert' w='99000' x='500' y='1000'>
+                <zone fixed-size='280' h='78375' id='10' is-fixed='true' name='availablity of hospital beds in chosen State' w='35688' x='34688' y='20750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='filter' _.fcp.SetMembershipControl.true...type-v2='filter' h='14000' id='8' mode='dropdown' name='population of chosen State' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]' w='15500' x='79500' y='14625'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='77875' id='3' is-fixed='true' name='population of chosen State' w='33500' x='188' y='20875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='12250' id='9' name='population of chosen State' pane-specification-id='0' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' w='16000' x='78375' y='30875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37750' id='11' is-fixed='true' name='statistic of hospital beds' w='27375' x='70875' y='54750'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{B97BDA6A-AA06-48D1-B2E2-5C699102729D}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' name='population of chosen State'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='dropdown' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</field>
+            <field>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{5E72DCED-677D-4D57-B01E-661AEF4E8A8C}' />
+    </window>
+    <window class='worksheet' name='availablity of hospital beds in chosen State'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='152'>
+            <card pane-specification-id='0' param='[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</field>
+            <field>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{9EFFDD87-598E-4CFD-8A71-35B771E7C4D9}' />
+    </window>
+    <window class='worksheet' name='statistic of hospital beds'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[none:State / Union Territory:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2F5EE192-505B-4092-8D90-90A6909C78CF}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Health facilities in states of India'>
+      <viewpoints>
+        <viewpoint name='availablity of hospital beds in chosen State'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='population of chosen State'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1m52c2d08ygiqe0zxvnrc0a93i6n].[:Measure Names]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='statistic of hospital beds' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{77BA5D41-657C-4829-B332-829374984E3D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Health facilities in states of India' width='192'>
+      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
+      RU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='availablity of hospital beds in chosen State' width='192'>
+      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
+      99M9MHkWAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='population of chosen State' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='65' name='statistic of hospital beds' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
